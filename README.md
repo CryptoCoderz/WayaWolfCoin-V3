@@ -58,7 +58,7 @@ General Specs
 
 BUILD LINUX
 -----------
-### Compiling WayaWolfCoin "SatoshiCore" daemon on Ubunutu 18.04 LTS Bionic
+### Compiling WayaWolfCoin "SatoshiCore" daemon on Ubuntu 22.04 LTS (Jammy Jellyfish)
 ### Note: guide should be compatible with other Ubuntu versions from 14.04+
 
 ### Become poweruser
@@ -99,7 +99,7 @@ daemon=1
 deminodes=1
 demimaxdepth=200
 testnet=0
-rpcuser=WayaWolfV3rpcuser
+rpcuser=WWrpcuser
 rpcpassword=SomeCrazyVeryVerySecurePasswordHere
 rpcport=10012
 port=10011
@@ -145,6 +145,7 @@ wget https://fukuchi.org/works/qrencode/qrencode-4.0.2.tar.gz; tar zxfv qrencode
 
 Ubuntu Legacy Patch (Ubuntu 18.04 and older)
 ```
+sudo apt-get install -y libevent-dev
 cp -r ~/WayaWolfCoin/src/qt/forms/signverifymessagedialog.ui.legacy_qt ~/WayaWolfCoin/src/qt/forms/signverifymessagedialog.ui
 cp -r ~/WayaWolfCoin/src/qt/forms/rpcconsolesettings.ui.legacy_qt ~/WayaWolfCoin/src/qt/forms/rpcconsolesettings.ui
 cp -r ~/WayaWolfCoin/src/qt/forms/rpcconsole.ui.legacy_qt ~/WayaWolfCoin/src/qt/forms/rpcconsole.ui
