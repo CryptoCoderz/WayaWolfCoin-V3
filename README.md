@@ -32,14 +32,12 @@ Specifications and General info
 ------------------
 WayaWolfCoin uses 
 
-	libsecp256k1,
-	libgmp,
-	Boost1.74, OR Boost1.6+,  
-	Openssl1.02u,
-	OR OpenSSL1.1x,
-	Berkeley DB 6.2.32,
-	QT5.15.2,
-	to compile
+	libsecp256k1
+	libgmp
+	Boost1.74, OR Boost1.6+
+	Openssl1.02u, OR OpenSSL1.1.1q, OR OpenSSL3.0.5
+	Berkeley DB 6.2.32
+	QT5.15.2 (for GUI)
 
 
 General Specs
@@ -82,7 +80,7 @@ cd ~; wget http://download.oracle.com/berkeley-db/db-6.2.32.NC.tar.gz; tar zxf d
 
 ### GitHub pull (Source Download)
 ```
-cd ~; git clone https://github.com/WayaWolf-Coin/WayaWolf-Coin-Core WayaWolfCoin
+cd ~; git clone https://github.com/CryptoCoderz/WayaWolfCoin-V3 WayaWolfCoin
 ```
 
 ### Build WayaWolfCoin daemon
