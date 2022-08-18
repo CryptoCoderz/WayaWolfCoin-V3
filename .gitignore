@@ -1,0 +1,26 @@
+src/*.exe
+src/WayaWolfCoin
+src/WayaWolfCoind
+src/test_WayaWolfCoin
+src/build.h
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.WayaWolfCoin
+#compilation and Qt preprocessor part
+.qmake.stash
+Makefile
+WayaWolfCoin-qt
+#resources cpp
+qrc_*.cpp
+#qt creator
+*.pro.user
+#mac specific
+.DS_Store
+build
+
+!src/leveldb/Makefile
