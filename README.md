@@ -7,7 +7,7 @@ What is the WayaWolfCoin [WW] Blockchain?
 -----------------------------------------
 
 ### Overview
-WayaWolfCoin is a blockchain project aimed at helping save our world's rainforests and other important environmental features.
+WayaWolfCoin is a blockchain project
 
 ### Blockchain Technology
 The WayaWolfCoin [WW] Blockchain is an experimental smart contract platform that enables 
