@@ -1220,6 +1220,8 @@ void BuildConfigFile()
     fprintf(ConfFile, "rpcport=10012\n");
     fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
     fprintf(ConfFile, "rpcallowip=127.0.0.1\n");
+    fprintf(ConfFile, "addnode=172.105.121.51:10011\n");
+    fprintf(ConfFile, "addnode=173.230.156.35:10011\n");
     fclose(ConfFile);
 }
 
