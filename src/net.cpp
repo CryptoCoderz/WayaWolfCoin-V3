@@ -1414,6 +1414,7 @@ void MapPort(bool fUseUPnP)
             delete upnp_thread;
             upnp_thread = NULL;
     }
+
 }
 
 #else
