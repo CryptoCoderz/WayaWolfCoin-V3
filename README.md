@@ -90,7 +90,7 @@ cd ~; cd ~/WayaWolfCoin/src; chmod a+x obj; chmod a+x leveldb/build_detect_platf
 
 ### Create config file (for daemon, DO NOT USE FOR QT)
 ```
-cd ~; sudo ufw allow 10011/tcp; sudo ufw allow 10012/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.WayaWolfV3; cat << "CONFIG" >> ~/.WayaWolfV3/WayaWolfCoin.conf
+cd ~; sudo ufw allow 20995/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.WayaWolfV3; cat << "CONFIG" >> ~/.WayaWolfV3/WayaWolfCoin.conf
 listen=1
 server=1
 daemon=1
@@ -99,12 +99,12 @@ demimaxdepth=200
 testnet=0
 rpcuser=WWrpcuser
 rpcpassword=SomeCrazyVeryVerySecurePasswordHere
-rpcport=10012
-port=10011
+rpcport=20925
+port=20995
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
-addnode=173.230.156.35:10011
-addnode=172.105.121.51:10011
+addnode=194.163.174.8:20995
+addnode=194.163.173.206:20995
 CONFIG
 chmod 700 ~/.WayaWolfV3/WayaWolfCoin.conf; chmod 700 ~/.WayaWolfV3; ls -la ~/.WayaWolfV3
 ```
