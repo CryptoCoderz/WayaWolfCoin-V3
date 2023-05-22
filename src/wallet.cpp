@@ -1431,8 +1431,8 @@ void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, unsigned int nSp
             if (nDepth < 1)
                 continue;
 
-            if ((pindexBest->nHeight-1) > 500) {
-                nStakeMinConfirmations = 1440;
+            if ((pindexBest->nHeight-1) > 300) {
+                nStakeMinConfirmations = 1000;
             }
 
             if (nDepth < nStakeMinConfirmations)

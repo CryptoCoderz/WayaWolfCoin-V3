@@ -29,7 +29,7 @@ static const int64_t GetTargetSpacing = BLOCK_SPACING;
 /** PubkeyAliasService required fee */
 inline int64_t PubkeyaliasserviceFEE(int nHeight) { return 75; } // ON (75 WW)
 /** Coinbase transaction outputs can only be staked after this number of new blocks (network rule) */
-inline int64_t nStakeMinConfirmations(int nHeight) { if(nHeight > 300){return 1000;} return 20; }
+static int64_t nStakeMinConfirmations = 20;// changes at block 300 to 1000 (3 days)
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
 static const int nTransactionMaturity = 5; // 5-TXs
 /** Coinbase generated outputs can only be spent after this number of new blocks (network rule) */

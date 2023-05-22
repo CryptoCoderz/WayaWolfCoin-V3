@@ -2328,8 +2328,8 @@ bool CTransaction::GetCoinAge(CTxDB& txdb, const CBlockIndex* pindexPrev, uint64
             return false;  // Transaction timestamp violation
 
         int nSpendDepth;
-        if (pindexPrev->nHeight > 500) {
-            nStakeMinConfirmations = 1440;
+        if (pindexPrev->nHeight > 300) {
+            nStakeMinConfirmations = 1000;
         }
         if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, nStakeMinConfirmations - 1, nSpendDepth))
         {
