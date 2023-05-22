@@ -52,8 +52,8 @@ public:
         pchMessageStart[2] = 0x9f;
         pchMessageStart[3] = 0xc3;
         vAlertPubKey = ParseHex("113fbb2ae311f123756b659c91a56897eba2efaacb6a192acdbef7894465f81f85d131aadfef3be6145678454852a2d08c6314bba5ca3cbe5616262da3b1a6fffa");
-        nDefaultPort = 20995; // peer
-        nRPCPort = 20925; // rpc
+        nDefaultPort = 9921; // peer
+        nRPCPort = 9922; // rpc
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 18);
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 18);
 

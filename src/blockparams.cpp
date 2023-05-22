@@ -56,9 +56,9 @@ int64_t VLrate5 = 0;
 int64_t VLRtemp = 0;
 int64_t DSrateNRM = BLOCK_SPACING;
 int64_t DSrateMAX = BLOCK_SPACING_MAX;
-int64_t FRrateDWN = DSrateNRM - 60;
-int64_t FRrateFLR = DSrateNRM - 90;
-int64_t FRrateCLNG = DSrateMAX + 180;
+int64_t FRrateDWN = DSrateNRM - 25;
+int64_t FRrateFLR = DSrateNRM - 45;
+int64_t FRrateCLNG = DSrateMAX;
 int64_t difficultyfactor = 0;
 int64_t AverageDivisor = 5;
 int64_t scanheight = 6;
@@ -464,7 +464,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     }
 
     // hardCap v2.1
-    else if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
+    if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
     {
         LogPrint("MINEOUT", "GetProofOfWorkReward(): create=%s nFees=%d\n", FormatMoney(nFees), nFees);
         return nFees;
@@ -491,7 +491,7 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
     }
 
     // hardCap v2.1
-    else if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
+    if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
     {
         LogPrint("MINEOUT", "GetProofOfStakeReward(): create=%s nFees=%d\n", FormatMoney(nFees), nFees);
         return nFees;

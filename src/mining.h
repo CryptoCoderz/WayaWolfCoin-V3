@@ -15,23 +15,23 @@ static const unsigned int nModifierInterval = 2 * 60;
 /** Genesis block subsidy */
 static const int64_t nGenesisBlockReward = 1 * COIN;
 /** Reserve block subsidy */
-static const int64_t nBlockRewardReserve = 90000 * COIN; // premine 9,000,000 WW
+static const int64_t nBlockRewardReserve = 100600 * COIN; // premine 10,060,000 WW
 /** Standard block subsidy */
 static const int64_t nBlockStandardReward = (6.25 * COIN); // 6.25 WW
 /** Block spacing preferred */
-static const int64_t BLOCK_SPACING = (5 * 60); // Five minutes (5 Min)
+static const int64_t BLOCK_SPACING = (2.5 * 60); // Two and a Half minutes (150 seconds)
 /** Block spacing minimum */
-static const int64_t BLOCK_SPACING_MIN = (4.5 * 60); // Four-and-a-Half minutes (4 Min, 30 Sec)
+static const int64_t BLOCK_SPACING_MIN = (1.5 * 60); // One-and-a-Half minutes (1 Min, 30 Sec)
 /** Block spacing maximum */
-static const int64_t BLOCK_SPACING_MAX = (5.5 * 60); // Five-and-a-Half minutes (5 Min, 30 Sec)
+static const int64_t BLOCK_SPACING_MAX = (3.5 * 60); // Three-and-a-Half minutes (3 Min, 30 Sec)
 /** Desired block times/spacing */
 static const int64_t GetTargetSpacing = BLOCK_SPACING;
 /** PubkeyAliasService required fee */
 inline int64_t PubkeyaliasserviceFEE(int nHeight) { return 75; } // ON (75 WW)
 /** Coinbase transaction outputs can only be staked after this number of new blocks (network rule) */
-static int nStakeMinConfirmations = 40;
+inline int64_t nStakeMinConfirmations(int nHeight) { if(nHeight > 300){return 1000;} return 20; }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int nTransactionMaturity = 10; // 10-TXs
+static const int nTransactionMaturity = 5; // 5-TXs
 /** Coinbase generated outputs can only be spent after this number of new blocks (network rule) */
 static const int nCoinbaseMaturity = 30; // 30-Mined
 

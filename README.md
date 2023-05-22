@@ -7,7 +7,7 @@ What is the WayaWolfCoin [WW] Blockchain?
 -----------------------------------------
 
 ### Overview
-WayaWolfCoin is a blockchain project
+WayaWolfCoin is a blockchain project.
 
 ### Blockchain Technology
 The WayaWolfCoin [WW] Blockchain is an experimental smart contract platform that enables 
@@ -44,14 +44,16 @@ General Specs
 
 	Coin Name: WayaWolf Coin
 	Ticker: WW
-	Block Spacing: 5 Minutes
-	Stake Minimum Age: 5 days (1440 Confirmations) (PoS-v3)
-	Block Reward: 6.25 WW
-	PoW/PoS Reward: 6.25 WW
-	Maximum Coin Count: 100 Million
-	Premine Coin Count: 9 Million (used for - swap from old chain)
-	Port: 10011
-	RPC Port: 10012
+	Minimum TX Fee: 0.0001
+	Block Spacing: 2.5 Minutes (150 Seconds)
+	Stake Minimum Age: 3 days (1000 Confirmations) (PoS-v3)
+	PoW/PoS Block Reward: 6.25 WW
+	Maximum Coin Count: 11.50 Million
+	Premine Coin Count: 10.06 Million (used for - swap from old chain)
+	Blocks Till Next Halving:  15,000
+	After That Blocks for Halving: 210,000 (~1 year)
+	Port: 9921
+	RPC Port: 9922
 
 
 BUILD LINUX
@@ -90,7 +92,7 @@ cd ~; cd ~/WayaWolfCoin/src; chmod a+x obj; chmod a+x leveldb/build_detect_platf
 
 ### Create config file (for daemon, DO NOT USE FOR QT)
 ```
-cd ~; sudo ufw allow 10011/tcp; sudo ufw allow 10012/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.WayaWolfV3; cat << "CONFIG" >> ~/.WayaWolfV3/WayaWolfCoin.conf
+cd ~; sudo ufw allow 9921/tcp; sudo ufw allow 9922/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.WayaWolfV3; cat << "CONFIG" >> ~/.WayaWolfV3/WayaWolfCoin.conf
 listen=1
 server=1
 daemon=1
@@ -99,12 +101,10 @@ demimaxdepth=200
 testnet=0
 rpcuser=WWrpcuser
 rpcpassword=SomeCrazyVeryVerySecurePasswordHere
-rpcport=10012
-port=10011
+rpcport=9921
+port=9922
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
-addnode=173.230.156.35:10011
-addnode=172.105.121.51:10011
 CONFIG
 chmod 700 ~/.WayaWolfV3/WayaWolfCoin.conf; chmod 700 ~/.WayaWolfV3; ls -la ~/.WayaWolfV3
 ```
