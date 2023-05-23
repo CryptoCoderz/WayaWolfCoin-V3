@@ -527,7 +527,7 @@ void WayaWolfCoinGUI::createToolBars()
 
 void WayaWolfCoinGUI::setClientModel(ClientModel *clientModel)
 {
-    netLabel->setText("v3.0.0.0");// Version in GUI
+    netLabel->setText("v3.0.0.1");// Version in GUI
 
     this->clientModel = clientModel;
     if(clientModel)

@@ -463,15 +463,20 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
         }
     }
 
+    // Subsidy is cut in half at block 15000
+    if(nHeight > 14999){
+        nSubsidy /= 2;
+    }
+
+    // Subsidy is cut in half every 210,000 blocks (~1 year)
+    nSubsidy >>= (nHeight / 210000);
+
     // hardCap v2.1
     if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
     {
         LogPrint("MINEOUT", "GetProofOfWorkReward(): create=%s nFees=%d\n", FormatMoney(nFees), nFees);
         return nFees;
     }
-
-    // Halving -- ON
-    nSubsidy >>= (nHeight / 210000); // Halves every 210,000 blocks
 
     LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
     return nSubsidy + nFees;
@@ -489,6 +494,14 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
             nSubsidy = nBlockRewardReserve;
         }
     }
+
+    // Subsidy is cut in half at block 15000
+    if(pindexPrev->nHeight+1 > 14999){
+        nSubsidy /= 2;
+    }
+
+    // Subsidy is cut in half every 210,000 blocks (~1 year)
+    nSubsidy >>= (pindexPrev->nHeight+1 / 210000);
 
     // hardCap v2.1
     if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
