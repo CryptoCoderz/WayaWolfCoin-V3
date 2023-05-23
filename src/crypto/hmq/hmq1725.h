@@ -1,7 +1,7 @@
 #ifndef HASHBLOCK_H
 #define HASHBLOCK_H
 
-#include "primitives/uint256.h"
+#include "uint256.h"
 #include "crypto/common/sph_blake.h"
 #include "crypto/common/sph_bmw.h"
 #include "crypto/common/sph_groestl.h"
