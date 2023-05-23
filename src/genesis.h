@@ -10,11 +10,11 @@
 #include "bignum.h"
 
 /** Genesis Start Time */
-static const unsigned int timeGenesisBlock = 1660778048; // Wednesday, August 17, 2022 11:14:08 PM (GMT)
+static const unsigned int timeGenesisBlock = 1684820877; // Monday, May 22, 2023 10:47:57 PM GMT-07:00 DST
 /** Genesis TestNet Start Time */
-static const unsigned int timeTestNetGenesis = 1660778088; // Wednesday, August 17, 2022 11:14:08 PM (GMT)
+static const unsigned int timeTestNetGenesis = 1684820887; // Monday, May 22, 2023 10:47:57 PM GMT-07:00 DST
 /** Genesis RegNet Start Time */
-static const unsigned int timeRegNetGenesis = 1660778098; // Wednesday, August 17, 2022 11:14:08 PM (GMT)
+static const unsigned int timeRegNetGenesis = 1684820897; // Monday, May 22, 2023 10:47:57 PM GMT-07:00 DST
 /** Genesis Nonce Mainnet*/
 static const unsigned int nNonceMain = 0;
 /** Genesis Nonce Testnet */

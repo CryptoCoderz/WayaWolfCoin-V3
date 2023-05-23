@@ -13,7 +13,7 @@
 #include "script.h"
 #include "scrypt.h"
 #include "crypto/bmw/bmw512.h"
-#include "crypto/echo/echo512.h"
+#include "crypto/hmq/hmq1725.h"
 #include "fork.h"
 #include "genesis.h"
 #include "mining.h"
@@ -704,14 +704,14 @@ public:
     uint256 GetHash() const
     {
         if (nVersion > 6)
-            return Hash_bmw512(BEGIN(nVersion), END(nNonce));
+            return Hash_hmq1725(BEGIN(nVersion), END(nNonce));
         else
             return GetPoWHash();
     }
 
     uint256 GetPoWHash() const
     {
-     return Hash_bmw512(BEGIN(nVersion), END(nNonce));
+     return Hash_hmq1725(BEGIN(nVersion), END(nNonce));
     }
 
     int64_t GetBlockTime() const

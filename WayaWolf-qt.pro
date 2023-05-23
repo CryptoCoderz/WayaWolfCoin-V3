@@ -334,10 +334,26 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/plugins/mrichtexteditor/mrichtextedit.h \
     src/qt/qvalidatedtextedit.h \
     src/crypto/common/sph_bmw.h \
+    src/crypto/common/sph_blake.h \
+    src/crypto/common/sph_groestl.h \
+    src/crypto/common/sph_jh.h \
+    src/crypto/common/sph_keccak.h \
+    src/crypto/common/sph_skein.h \
+    src/crypto/common/sph_types.h \
+    src/crypto/common/sph_luffa.h \
+    src/crypto/common/sph_cubehash.h \
     src/crypto/common/sph_echo.h \
+    src/crypto/common/sph_shavite.h \
+    src/crypto/common/sph_simd.h \
+    src/crypto/common/sph_hamsi.h \
+    src/crypto/common/sph_fugue.h \
+    src/crypto/common/sph_shabal.h \
+    src/crypto/common/sph_whirlpool.h \
+    src/crypto/common/sph_haval.h \
+    src/crypto/common/sph_sha2.h \
     src/crypto/common/sph_types.h \
     src/crypto/bmw/bmw512.h \
-    src/crypto/echo/echo512.h \
+    src/crypto/hmq/hmq1725.h \
     src/limitedmap.h \
     src/deminode/demimodule.h \
     src/deminode/deminet.h \
@@ -450,8 +466,23 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/plugins/mrichtexteditor/mrichtextedit.cpp \
     src/rpcsmessage.cpp \
     src/crypto/common/aes_helper.c \
+    src/crypto/common/blake.c \
     src/crypto/common/bmw.c \
+    src/crypto/common/groestl.c \
+    src/crypto/common/jh.c \
+    src/crypto/common/keccak.c \
+    src/crypto/common//skein.c \
+    src/crypto/common/luffa.c \
+    src/crypto/common/cubehash.c \
+    src/crypto/common/shavite.c \
     src/crypto/common/echo.c \
+    src/crypto/common/simd.c \
+    src/crypto/common/hamsi.c \
+    src/crypto/common/fugue.c \
+    src/crypto/common/shabal.c \
+    src/crypto/common/whirlpool.c \
+    src/crypto/common/haval.c \
+    src/crypto/common/sha2big.c \
     src/deminode/demimodule.cpp \
     src/deminode/deminet.cpp \
     src/deminode/demisync.cpp

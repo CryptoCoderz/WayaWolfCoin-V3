@@ -27,8 +27,7 @@ void ReadDemiConfigFile(std::string peerReadAddr)
         boost::filesystem::path ConfPath;
                ConfPath = GetDataDir() / "Demi.conf";
                FILE* ConfFile = fopen(ConfPath.string().c_str(), "w");
-               fprintf(ConfFile, "172.105.121.51:10011\n");
-               fprintf(ConfFile, "173.230.156.35:10011\n");
+               fprintf(ConfFile, "127.0.0.1:9922\n");
                fclose(ConfFile);
     }
 
