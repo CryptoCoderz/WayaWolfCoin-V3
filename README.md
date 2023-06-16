@@ -106,6 +106,7 @@ rpcport=9921
 port=9922
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
+addnode=45.56.105.176:9922
 CONFIG
 chmod 700 ~/.WayaWolfV3/WayaWolfCoin.conf; chmod 700 ~/.WayaWolfV3; ls -la ~/.WayaWolfV3
 ```
